@@ -27,6 +27,9 @@ Plugin 'git@github.com:vim-ruby/vim-ruby.git'
 Plugin 'git@github.com:kshenoy/vim-signature.git'
 Plugin 'git@github.com:slim-template/vim-slim.git'
 
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+
 call vundle#end()
 
 filetype plugin on
@@ -201,3 +204,7 @@ nnoremap <leader>p :CtrlPTag<cr>
 let g:EclimCompletionMethod = 'omnifunc'
 
 nnoremap <F5> :GundoToggle<CR>
+
+let g:UltiSnipsExpandTrigger="<c-k>"
+let g:UltiSnipsJumpForwardTrigger="<c-k>"
+let g:UltiSnipsJumpBackwardTrigger="<s-c-j>"
