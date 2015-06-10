@@ -6,6 +6,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " Custom plugins
+Plugin 'git@github.com:xolox/vim-misc.git'
 Plugin 'git@github.com:scrooloose/nerdtree.git'
 Plugin 'git@github.com:Valloric/YouCompleteMe.git'
 Plugin 'git@github.com:rking/ag.vim.git'
@@ -20,7 +21,6 @@ Plugin 'git@github.com:Lokaltog/vim-easymotion.git'
 Plugin 'git@github.com:tpope/vim-fugitive.git'
 Plugin 'git@github.com:airblade/vim-gitgutter.git'
 Plugin 'git@github.com:lunaru/vim-less.git'
-Plugin 'git@github.com:xolox/vim-misc.git'
 Plugin 'git@github.com:tpope/vim-rails.git'
 Plugin 'git@github.com:thoughtbot/vim-rspec.git'
 Plugin 'git@github.com:vim-ruby/vim-ruby.git'
