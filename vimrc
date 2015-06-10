@@ -29,6 +29,7 @@ Plugin 'git@github.com:slim-template/vim-slim.git'
 
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+Plugin 'szw/vim-tags'
 
 call vundle#end()
 
