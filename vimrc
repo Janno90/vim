@@ -27,8 +27,7 @@ Plugin 'git@github.com:vim-ruby/vim-ruby.git'
 Plugin 'git@github.com:kshenoy/vim-signature.git'
 Plugin 'git@github.com:slim-template/vim-slim.git'
 Plugin 'git@github.com:tpope/vim-dispatch.git'
-Plugin 'git@github.com:janno90/vim-tags.git'
-
+Plugin 'git@github.com:xolox/vim-easytags.git'
 
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
@@ -80,9 +79,6 @@ set number                       "Show current line as normal line number
 
 "set nowrap "Don't wrap lines
 set linebreak "Wrap lines at convenient points
-
-" Set default tag folder as project root
-set tags=./tags;
 
 " Scrolling settings
 set scrolloff=8
@@ -211,3 +207,9 @@ nnoremap <F5> :GundoToggle<CR>
 let g:UltiSnipsExpandTrigger="<c-k>"
 let g:UltiSnipsJumpForwardTrigger="<c-k>"
 let g:UltiSnipsJumpBackwardTrigger="<s-c-j>"
+
+set tags=tags;/
+let g:easytags_dynamic_files = 1
+let g:easytags_events = ['BufWritePost']
+let g:easytags_auto_highlight = 0
+let g:easytags_async = 1
