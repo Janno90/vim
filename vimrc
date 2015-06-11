@@ -26,10 +26,12 @@ Plugin 'git@github.com:thoughtbot/vim-rspec.git'
 Plugin 'git@github.com:vim-ruby/vim-ruby.git'
 Plugin 'git@github.com:kshenoy/vim-signature.git'
 Plugin 'git@github.com:slim-template/vim-slim.git'
+Plugin 'git@github.com:tpope/vim-dispatch.git'
+Plugin 'git@github.com:janno90/vim-tags.git'
+
 
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
-Plugin 'szw/vim-tags'
 
 call vundle#end()
 
