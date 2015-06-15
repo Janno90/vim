@@ -28,6 +28,7 @@ Plugin 'git@github.com:kshenoy/vim-signature.git'
 Plugin 'git@github.com:slim-template/vim-slim.git'
 Plugin 'git@github.com:tpope/vim-dispatch.git'
 Plugin 'git@github.com:xolox/vim-easytags.git'
+Plugin 'git@github.com:vim-scripts/YankRing.vim.git'
 
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
@@ -38,16 +39,13 @@ filetype plugin on
 filetype plugin indent on
 syntax on
 
-
 augroup rubypath
   autocmd!
   autocmd FileType ruby setlocal suffixesadd+=.rb
 augroup END
 
 
-
-
-
+" Gneral
 set autoindent
 set ts=2          "tabsize
 set shiftwidth=2  "indentation width
@@ -200,16 +198,24 @@ let g:ctrlp_match_window = 'results:30'
 " Bind leader + p to open ctag search with ctrlp
 nnoremap <leader>p :CtrlPTag<cr>
 
+" Eclim
 let g:EclimCompletionMethod = 'omnifunc'
 
+" Gundo
 nnoremap <F5> :GundoToggle<CR>
 
+" Ultisnips shortcuts
 let g:UltiSnipsExpandTrigger="<c-k>"
 let g:UltiSnipsJumpForwardTrigger="<c-k>"
 let g:UltiSnipsJumpBackwardTrigger="<s-c-j>"
 
+" Tags
 set tags=tags;/
 let g:easytags_dynamic_files = 1
 let g:easytags_events = ['BufWritePost']
 let g:easytags_auto_highlight = 0
 let g:easytags_async = 1
+
+" YankRing shortcuts
+let g:yankring_replace_n_pkey = '<C-n>'
+nnoremap <silent> <F3> :YRShow<CR>
