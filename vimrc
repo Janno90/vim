@@ -29,7 +29,10 @@ Plugin 'git@github.com:slim-template/vim-slim.git'
 Plugin 'git@github.com:tpope/vim-dispatch.git'
 Plugin 'git@github.com:xolox/vim-easytags.git'
 Plugin 'git@github.com:vim-scripts/YankRing.vim.git'
+Plugin 'git@github.com:scrooloose/syntastic.git'
+Plugin 'git@github.com:tpope/vim-repeat.git'
 
+Plugin 'tpope/vim-surround'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 
