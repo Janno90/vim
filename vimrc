@@ -31,6 +31,7 @@ Plugin 'git@github.com:xolox/vim-easytags.git'
 Plugin 'git@github.com:vim-scripts/YankRing.vim.git'
 Plugin 'git@github.com:scrooloose/syntastic.git'
 Plugin 'git@github.com:tpope/vim-repeat.git'
+"Plugin 'git@github.com:chrisbra/csv.vim.git'
 
 Plugin 'tpope/vim-surround'
 Plugin 'SirVer/ultisnips'
