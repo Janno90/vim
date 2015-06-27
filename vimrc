@@ -34,9 +34,11 @@ Plugin 'git@github.com:tpope/vim-repeat.git'
 "Plugin 'git@github.com:chrisbra/csv.vim.git'
 Plugin 'git@github.com:jgdavey/tslime.vim.git'
 Plugin 'git@github.com:christoomey/vim-tmux-navigator.git'
+Plugin 'git@github.com:octol/vim-cpp-enhanced-highlight.git'
 
 "Plugin 'tpope/vim-surround'
 Plugin 'SirVer/ultisnips'
+Plugin 'rdnetto/YCM-Generator'
 "Plugin 'honza/vim-snippets'
 
 call vundle#end()
