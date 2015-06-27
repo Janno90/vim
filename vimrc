@@ -11,9 +11,9 @@ Plugin 'git@github.com:scrooloose/nerdtree.git'
 Plugin 'git@github.com:Valloric/YouCompleteMe.git'
 Plugin 'git@github.com:rking/ag.vim.git'
 Plugin 'git@github.com:kien/ctrlp.vim.git'
-Plugin 'git@github.com:sjl/gundo.vim.git'
+"Plugin 'git@github.com:sjl/gundo.vim.git'
 Plugin 'git@github.com:mfukar/robotframework-vim.git'
-Plugin 'git@github.com:majutsushi/tagbar.git'
+"Plugin 'git@github.com:majutsushi/tagbar.git'
 Plugin 'git@github.com:bling/vim-airline.git'
 Plugin 'git@github.com:tpope/vim-bundler.git'
 Plugin 'git@github.com:vim-scripts/vim-coffee-script.git'
@@ -24,7 +24,7 @@ Plugin 'git@github.com:lunaru/vim-less.git'
 Plugin 'git@github.com:tpope/vim-rails.git'
 Plugin 'git@github.com:thoughtbot/vim-rspec.git'
 Plugin 'git@github.com:vim-ruby/vim-ruby.git'
-Plugin 'git@github.com:kshenoy/vim-signature.git'
+"Plugin 'git@github.com:kshenoy/vim-signature.git'
 Plugin 'git@github.com:slim-template/vim-slim.git'
 "Plugin 'git@github.com:tpope/vim-dispatch.git'
 "Plugin 'git@github.com:xolox/vim-easytags.git'
@@ -32,10 +32,12 @@ Plugin 'git@github.com:vim-scripts/YankRing.vim.git'
 Plugin 'git@github.com:scrooloose/syntastic.git'
 Plugin 'git@github.com:tpope/vim-repeat.git'
 "Plugin 'git@github.com:chrisbra/csv.vim.git'
+Plugin 'git@github.com:jgdavey/tslime.vim.git'
+Plugin 'git@github.com:christoomey/vim-tmux-navigator.git'
 
-Plugin 'tpope/vim-surround'
+"Plugin 'tpope/vim-surround'
 Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
+"Plugin 'honza/vim-snippets'
 
 call vundle#end()
 
@@ -43,10 +45,10 @@ filetype plugin on
 filetype plugin indent on
 syntax on
 
-augroup rubypath
-  autocmd!
-  autocmd FileType ruby setlocal suffixesadd+=.rb
-augroup END
+"augroup rubypath
+"  autocmd!
+"  autocmd FileType ruby setlocal suffixesadd+=.rb
+"augroup END
 
 
 " Gneral
@@ -121,7 +123,7 @@ endif
 
 " Bind space as leader key
 noremap <Space> <NOP>
-:let mapleader = " "
+let mapleader = " "
 
 " RSpec.vim mappings
 map <Leader>t :call RunCurrentSpecFile()<CR>
@@ -202,9 +204,6 @@ let g:ctrlp_match_window = 'results:30'
 " Bind leader + p to open ctag search with ctrlp
 nnoremap <leader>p :CtrlPTag<cr>
 
-" Eclim
-let g:EclimCompletionMethod = 'omnifunc'
-
 " Gundo
 nnoremap <F5> :GundoToggle<CR>
 
@@ -223,7 +222,6 @@ let g:easytags_async = 1
 " YankRing shortcuts
 let g:yankring_replace_n_pkey = '<C-n>'
 nnoremap <silent> <F3> :YRShow<CR>
-
 
 " Gitgutter
 let g:gitgutter_realtime = 0
