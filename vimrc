@@ -26,8 +26,8 @@ Plugin 'git@github.com:thoughtbot/vim-rspec.git'
 Plugin 'git@github.com:vim-ruby/vim-ruby.git'
 Plugin 'git@github.com:kshenoy/vim-signature.git'
 Plugin 'git@github.com:slim-template/vim-slim.git'
-Plugin 'git@github.com:tpope/vim-dispatch.git'
-Plugin 'git@github.com:xolox/vim-easytags.git'
+"Plugin 'git@github.com:tpope/vim-dispatch.git'
+"Plugin 'git@github.com:xolox/vim-easytags.git'
 Plugin 'git@github.com:vim-scripts/YankRing.vim.git'
 Plugin 'git@github.com:scrooloose/syntastic.git'
 Plugin 'git@github.com:tpope/vim-repeat.git'
@@ -223,3 +223,8 @@ let g:easytags_async = 1
 " YankRing shortcuts
 let g:yankring_replace_n_pkey = '<C-n>'
 nnoremap <silent> <F3> :YRShow<CR>
+
+
+" Gitgutter
+let g:gitgutter_realtime = 0
+let g:gitgutter_eager = 0
