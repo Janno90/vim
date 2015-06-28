@@ -39,7 +39,7 @@ Plugin 'git@github.com:octol/vim-cpp-enhanced-highlight.git'
 "Plugin 'tpope/vim-surround'
 Plugin 'SirVer/ultisnips'
 Plugin 'rdnetto/YCM-Generator'
-"Plugin 'honza/vim-snippets'
+Plugin 'honza/vim-snippets'
 
 call vundle#end()
 
