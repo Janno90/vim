@@ -228,3 +228,5 @@ nnoremap <silent> <F3> :YRShow<CR>
 " Gitgutter
 let g:gitgutter_realtime = 0
 let g:gitgutter_eager = 0
+
+source ~/.vim/scripts/closetag.vim
