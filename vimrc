@@ -6,35 +6,35 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " Custom plugins
-Plugin 'git@github.com:xolox/vim-misc.git'
-Plugin 'git@github.com:scrooloose/nerdtree.git'
-Plugin 'git@github.com:Valloric/YouCompleteMe.git'
-Plugin 'git@github.com:rking/ag.vim.git'
-Plugin 'git@github.com:kien/ctrlp.vim.git'
-"Plugin 'git@github.com:sjl/gundo.vim.git'
-Plugin 'git@github.com:mfukar/robotframework-vim.git'
-"Plugin 'git@github.com:majutsushi/tagbar.git'
-Plugin 'git@github.com:bling/vim-airline.git'
-Plugin 'git@github.com:tpope/vim-bundler.git'
-Plugin 'git@github.com:vim-scripts/vim-coffee-script.git'
-Plugin 'git@github.com:Lokaltog/vim-easymotion.git'
-Plugin 'git@github.com:tpope/vim-fugitive.git'
-Plugin 'git@github.com:airblade/vim-gitgutter.git'
-Plugin 'git@github.com:lunaru/vim-less.git'
-Plugin 'git@github.com:tpope/vim-rails.git'
-Plugin 'git@github.com:thoughtbot/vim-rspec.git'
-Plugin 'git@github.com:vim-ruby/vim-ruby.git'
-"Plugin 'git@github.com:kshenoy/vim-signature.git'
-Plugin 'git@github.com:slim-template/vim-slim.git'
-"Plugin 'git@github.com:tpope/vim-dispatch.git'
-"Plugin 'git@github.com:xolox/vim-easytags.git'
-Plugin 'git@github.com:vim-scripts/YankRing.vim.git'
-Plugin 'git@github.com:scrooloose/syntastic.git'
-Plugin 'git@github.com:tpope/vim-repeat.git'
-"Plugin 'git@github.com:chrisbra/csv.vim.git'
-Plugin 'git@github.com:jgdavey/tslime.vim.git'
-Plugin 'git@github.com:christoomey/vim-tmux-navigator.git'
-Plugin 'git@github.com:octol/vim-cpp-enhanced-highlight.git'
+Plugin 'xolox/vim-misc.git'
+Plugin 'scrooloose/nerdtree.git'
+Plugin 'Valloric/YouCompleteMe.git'
+Plugin 'rking/ag.vim.git'
+Plugin 'kien/ctrlp.vim.git'
+"Plugin :sjl/gundo.vim.git'
+Plugin 'mfukar/robotframework-vim.git'
+"Plugin :majutsushi/tagbar.git'
+Plugin 'bling/vim-airline.git'
+Plugin 'tpope/vim-bundler.git'
+Plugin 'vim-scripts/vim-coffee-script.git'
+Plugin 'Lokaltog/vim-easymotion.git'
+Plugin 'tpope/vim-fugitive.git'
+Plugin 'airblade/vim-gitgutter.git'
+Plugin 'lunaru/vim-less.git'
+Plugin 'tpope/vim-rails.git'
+Plugin 'thoughtbot/vim-rspec.git'
+Plugin 'vim-ruby/vim-ruby.git'
+"Plugin :kshenoy/vim-signature.git'
+Plugin 'slim-template/vim-slim.git'
+"Plugin :tpope/vim-dispatch.git'
+"Plugin :xolox/vim-easytags.git'
+Plugin 'vim-scripts/YankRing.vim.git'
+Plugin 'scrooloose/syntastic.git'
+"Plugin :tpope/vim-repeat.git'
+"Plugin :chrisbra/csv.vim.git'
+Plugin 'jgdavey/tslime.vim.git'
+Plugin 'christoomey/vim-tmux-navigator.git'
+Plugin 'octol/vim-cpp-enhanced-highlight.git'
 
 "Plugin 'tpope/vim-surround'
 Plugin 'SirVer/ultisnips'
@@ -53,32 +53,38 @@ syntax on
 "augroup END
 
 
-" Gneral
+" General
 set autoindent
 set ts=2          "tabsize
 set shiftwidth=2  "indentation width
 set expandtab     "tabs as spaces
 set showmatch
 set ignorecase    "ignore case on search
+set smartcase     "activate case if has uppercase letter
 set hlsearch      "highlight search results
-set smartcase
 set incsearch
-set vb
-set ruler
-set scrolloff=2
-set laststatus=2
+"set vb
+"set ruler
+"set scrolloff=2
+"set laststatus=2
 set list listchars=tab:-·,trail:· "Tab and trail show characters
-set nofoldenable
+"set nofoldenable
 set wildmenu
 set wildmode=list:longest,full
 
+set lazyredraw
+set scrolljump=5
+set nocursorline
+set nocursorcolumn
+
 set backspace=indent,eol,start
 set history=1000                  "undo history size
-set showcmd
-set showmode
-set autoread
-set smartindent
-set smarttab
+
+"set showcmd
+"set showmode
+"set autoread
+"set smartindent
+"set smarttab
 set relativenumber               "Enable relative line numbers
 set number                       "Show current line as normal line number
 "set mouse=a
@@ -112,16 +118,16 @@ autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
 "shortcut F9 to syntax check
-autocmd FileType ruby map <F9> :w<CR>:!ruby -c %<CR>
+"autocmd FileType ruby map <F9> :w<CR>:!ruby -c %<CR>
 
 "shortcut f8 for tagbar
 nmap <F8> :TagbarToggle<CR>
 
 " now set it up to change the status line based on mode
-if version >= 700
-  au InsertEnter * hi StatusLine ctermfg=235 ctermbg=2
-  au InsertLeave * hi StatusLine ctermbg=0 ctermfg=12
-endif
+"if version >= 700
+"  au InsertEnter * hi StatusLine ctermfg=235 ctermbg=2
+"  au InsertLeave * hi StatusLine ctermbg=0 ctermfg=12
+"endif
 
 " Bind space as leader key
 noremap <Space> <NOP>
@@ -190,7 +196,7 @@ noremap <leader>g <C-]>
 let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'
 
 " ctrlp reload directory when changing working directory
-let g:ctrlp_working_path_mode = 0
+" let g:ctrlp_working_path_mode = 0
 
 " Tmux background bug fix
 if &term =~ '256color'
@@ -204,10 +210,10 @@ map <Leader>b :CtrlPBuffer<cr>
 let g:ctrlp_match_window = 'results:30'
 
 " Bind leader + p to open ctag search with ctrlp
-nnoremap <leader>p :CtrlPTag<cr>
+" nnoremap <leader>p :CtrlPTag<cr>
 
 " Gundo
-nnoremap <F5> :GundoToggle<CR>
+" nnoremap <F5> :GundoToggle<CR>
 
 " Ultisnips shortcuts
 let g:UltiSnipsExpandTrigger="<c-k>"
@@ -215,11 +221,11 @@ let g:UltiSnipsJumpForwardTrigger="<c-k>"
 let g:UltiSnipsJumpBackwardTrigger="<s-c-j>"
 
 " Tags
-set tags=tags;/
-let g:easytags_dynamic_files = 1
-let g:easytags_events = ['BufWritePost']
-let g:easytags_auto_highlight = 0
-let g:easytags_async = 1
+"set tags=tags;/
+"let g:easytags_dynamic_files = 1
+"let g:easytags_events = ['BufWritePost']
+"let g:easytags_auto_highlight = 0
+"let g:easytags_async = 1
 
 " YankRing shortcuts
 let g:yankring_replace_n_pkey = '<C-n>'
@@ -228,5 +234,3 @@ nnoremap <silent> <F3> :YRShow<CR>
 " Gitgutter
 let g:gitgutter_realtime = 0
 let g:gitgutter_eager = 0
-
-source ~/.vim/scripts/closetag.vim
