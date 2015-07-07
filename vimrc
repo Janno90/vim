@@ -83,6 +83,7 @@ set list listchars=tab:-·,trail:· "Tab and trail show characters
 "set nofoldenable
 set wildmenu
 set wildmode=list:longest,full
+set laststatus=2
 
 set lazyredraw
 set scrolljump=5
