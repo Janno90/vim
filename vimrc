@@ -1,57 +1,69 @@
-set nocompatible
-filetype off
+" Note: Skip initialization for vim-tiny or vim-small.
+if 0 | endif
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'gmarik/Vundle.vim'
+if has('vim_starting')
+  if &compatible
+    set nocompatible               " Be iMproved
+  endif
 
-" Custom plugins
-Plugin 'xolox/vim-misc.git'
-Plugin 'scrooloose/nerdtree.git'
-Plugin 'Valloric/YouCompleteMe.git'
-Plugin 'rking/ag.vim.git'
-Plugin 'kien/ctrlp.vim.git'
-"Plugin :sjl/gundo.vim.git'
-Plugin 'mfukar/robotframework-vim.git'
-"Plugin :majutsushi/tagbar.git'
-Plugin 'bling/vim-airline.git'
-Plugin 'tpope/vim-bundler.git'
-Plugin 'vim-scripts/vim-coffee-script.git'
-Plugin 'Lokaltog/vim-easymotion.git'
-Plugin 'tpope/vim-fugitive.git'
-Plugin 'airblade/vim-gitgutter.git'
-Plugin 'lunaru/vim-less.git'
-Plugin 'tpope/vim-rails.git'
-Plugin 'thoughtbot/vim-rspec.git'
-Plugin 'vim-ruby/vim-ruby.git'
-"Plugin :kshenoy/vim-signature.git'
-Plugin 'slim-template/vim-slim.git'
-"Plugin :tpope/vim-dispatch.git'
-"Plugin :xolox/vim-easytags.git'
-Plugin 'vim-scripts/YankRing.vim.git'
-Plugin 'scrooloose/syntastic.git'
-"Plugin :tpope/vim-repeat.git'
-"Plugin :chrisbra/csv.vim.git'
-Plugin 'jgdavey/tslime.vim.git'
-Plugin 'christoomey/vim-tmux-navigator.git'
-Plugin 'octol/vim-cpp-enhanced-highlight.git'
+  " Required:
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
 
-"Plugin 'tpope/vim-surround'
-Plugin 'SirVer/ultisnips'
-Plugin 'rdnetto/YCM-Generator'
-Plugin 'honza/vim-snippets'
+" Required:
+call neobundle#begin(expand('~/.vim/bundle/'))
 
-call vundle#end()
+" Let NeoBundle manage NeoBundle
+" Required:
+NeoBundleFetch 'Shougo/neobundle.vim'
 
-filetype plugin on
+NeoBundle 'xolox/vim-misc'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'Valloric/YouCompleteMe'
+NeoBundle 'rking/ag.vim'
+NeoBundle 'kien/ctrlp.vim'
+"NeoBundle :sjl/gundo.vim'
+NeoBundle 'mfukar/robotframework-vim'
+"NeoBundle :majutsushi/tagbar'
+NeoBundle 'bling/vim-airline'
+NeoBundle 'tpope/vim-bundler'
+NeoBundle 'vim-scripts/vim-coffee-script'
+NeoBundle 'Lokaltog/vim-easymotion'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'lunaru/vim-less'
+NeoBundle 'tpope/vim-rails'
+NeoBundle 'thoughtbot/vim-rspec'
+NeoBundle 'vim-ruby/vim-ruby'
+"NeoBundle :kshenoy/vim-signature'
+NeoBundle 'slim-template/vim-slim'
+"NeoBundle :tpope/vim-dispatch'
+"NeoBundle :xolox/vim-easytags'
+NeoBundle 'vim-scripts/YankRing.vim'
+NeoBundle 'scrooloose/syntastic'
+"NeoBundle :tpope/vim-repeat'
+"NeoBundle :chrisbra/csv.vim'
+NeoBundle 'jgdavey/tslime.vim'
+NeoBundle 'christoomey/vim-tmux-navigator'
+NeoBundle 'octol/vim-cpp-enhanced-highlight'
+
+"NeoBundle 'tpope/vim-surround'
+NeoBundle 'SirVer/ultisnips'
+NeoBundle 'rdnetto/YCM-Generator'
+NeoBundle 'honza/vim-snippets'
+
+" My Bundles here:
+" Refer to |:NeoBundle-examples|.
+" Note: You don't set neobundle setting in .gvimrc!
+
+call neobundle#end()
+
+" Required:
 filetype plugin indent on
-syntax on
 
-"augroup rubypath
-"  autocmd!
-"  autocmd FileType ruby setlocal suffixesadd+=.rb
-"augroup END
-
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck
 
 " General
 set autoindent
