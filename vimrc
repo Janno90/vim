@@ -51,7 +51,6 @@ NeoBundle 'octol/vim-cpp-enhanced-highlight'
 NeoBundle 'SirVer/ultisnips'
 NeoBundle 'rdnetto/YCM-Generator'
 NeoBundle 'honza/vim-snippets'
-NeoBundle 'fholgado/minibufexpl.vim'
 NeoBundle 'tomasr/molokai'
 
 " My Bundles here:
@@ -249,5 +248,3 @@ nnoremap <silent> <F3> :YRShow<CR>
 " Gitgutter
 let g:gitgutter_realtime = 0
 let g:gitgutter_eager = 0
-
-autocmd VimEnter * MBEOpen
