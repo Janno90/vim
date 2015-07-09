@@ -52,6 +52,7 @@ NeoBundle 'SirVer/ultisnips'
 NeoBundle 'rdnetto/YCM-Generator'
 NeoBundle 'honza/vim-snippets'
 NeoBundle 'fholgado/minibufexpl.vim'
+NeoBundle 'tomasr/molokai'
 
 " My Bundles here:
 " Refer to |:NeoBundle-examples|.
