@@ -205,6 +205,7 @@ nnoremap <C-right> :vertical resize +5<cr>
 
 " Bind leader g to goto tag
 noremap <leader>g <C-]>
+noremap <leader>f g]
 
 " Use tslime when running tests
 let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'
