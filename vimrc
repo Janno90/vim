@@ -115,6 +115,9 @@ set sidescroll=1
 set undofile
 set undodir=~/.vim/undodir
 
+set backupdir=~/.vim/backupdir//
+set directory=~/.vim/swapfiles//
+
 " Colorscheme
 set t_Co=256
 colorscheme molokai
