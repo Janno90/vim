@@ -113,7 +113,7 @@ set sidescroll=1
 
 "vim undo
 set undofile
-set undodir=~/.vim/undodir
+set undodir=~/.vim/undodir//
 
 set backupdir=~/.vim/backupdir//
 set directory=~/.vim/swapfiles//
