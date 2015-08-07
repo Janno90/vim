@@ -119,8 +119,13 @@ set backupdir=~/.vim/backupdir//
 set directory=~/.vim/swapfiles//
 
 " Colorscheme
-set t_Co=256
+set t_ut=
+set background=dark
+syntax enable
 colorscheme molokai
+set enc=utf-8
+set term=screen-256color
+let $TERM='screen-256color'
 
 " Modifies matching tag colors
 hi MatchParen ctermbg=0
@@ -215,11 +220,6 @@ let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'
 
 " ctrlp reload directory when changing working directory
 " let g:ctrlp_working_path_mode = 0
-
-" Tmux background bug fix
-if &term =~ '256color'
-  set t_ut=
-endif
 
 " Map leader b to search from buffer
 map <Leader>b :CtrlPBuffer<cr>
